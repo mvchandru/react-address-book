@@ -1,0 +1,44 @@
+.slideout {
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+  }
+  .slideoutContainer {
+    width: 30%;
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .slideout {
+    .slideoutContainer {
+      width: 40%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .slideout {
+    .slideoutContainer {
+      width: 60%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .slideout {
+    .slideoutContainer {
+      width: 90%;
+    }
+  }
+}

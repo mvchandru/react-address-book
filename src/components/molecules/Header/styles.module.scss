@@ -1,0 +1,28 @@
+header {
+  height: 10vh;
+
+  .header {
+    height: 10vh;
+    background-color: #4285f4;
+    color: white;
+    box-shadow: 0 10px 10px -15px rgb(0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      display: flex;
+      align-items: center;
+      padding-left: 2rem;
+    }
+
+    .addIcon {
+      display: flex;
+      align-items: center;
+      padding-right: 2rem;
+    }
+  }
+}

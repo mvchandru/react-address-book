@@ -1,0 +1,62 @@
+.allContacts {
+  .section {
+    .count {
+      color: #4285f4;
+    }
+  }
+
+  .heading,
+  .data {
+    display: flex;
+    border-bottom: 1px solid rgb(239, 239, 239);
+    div {
+      width: 25%;
+      word-wrap: break-word;
+      padding: 12px 6px 12px 3px;
+    }
+  }
+
+  .heading {
+    font-weight: 600;
+    color: #4285f4;
+  }
+
+  .data {
+    cursor: pointer;
+
+    &.selected {
+      background-color: #e8f4f8;
+    }
+
+    &:hover {
+      background-color: rgba(239, 239, 239, 0.5);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .allContacts {
+    .heading {
+      display: none;
+    }
+    .data {
+      flex-direction: column;
+      padding: 5px 0;
+      div {
+        width: 100%;
+        padding: 0;
+
+        &.name {
+          padding: 5px 0 0 0;
+        }
+        &.phone {
+          padding: 0;
+        }
+      }
+
+      .hideOnMobile {
+        display: none;
+      }
+    }
+  }
+}

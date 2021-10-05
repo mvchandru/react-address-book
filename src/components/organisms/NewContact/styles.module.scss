@@ -1,0 +1,12 @@
+.newContact {
+  padding: 2rem;
+  .section {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      color: #4285f4;
+      font-size: 1.25em;
+    }
+  }
+}
