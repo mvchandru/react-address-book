@@ -1,5 +1,7 @@
 .allContacts {
   .section {
+    display: flex;
+    justify-content: space-between;
     .count {
       color: #4285f4;
     }

@@ -28,15 +28,17 @@ const NewContact = ({ toggleContactForm }) => {
   });
 
   return (
-    <SlideOut toggleContactForm={toggleContactForm}>
-      <div className={classes.newContact}>
-        <div className={classes.section}>
-          <h2 className={classes.title}>New Contact</h2>
-          <CancelIcon toggleContactForm={toggleContactForm} />
+    <div data-testid="new-contact">
+      <SlideOut toggleContactForm={toggleContactForm}>
+        <div className={classes.newContact}>
+          <div className={classes.section}>
+            <h2 className={classes.title}>New Contact</h2>
+            <CancelIcon toggleContactForm={toggleContactForm} />
+          </div>
+          <ContactForm formik={formik} formType={FormType.New} />
         </div>
-        <ContactForm formik={formik} formType={FormType.New} />
-      </div>
-    </SlideOut>
+      </SlideOut>
+    </div>
   );
 };
 

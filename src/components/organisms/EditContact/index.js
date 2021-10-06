@@ -34,21 +34,25 @@ const EditContact = ({ toggleContactForm, toggleContactEditForm }) => {
   });
 
   return (
-    <SlideOut toggleContactForm={toggleContactForm}>
-      <div className={classes.editContact}>
-        <div className={classes.section}>
-          <h2 className={classes.title}>Edit Contact</h2>
-          <div className={classes.icons}>
-            <DeleteIcon
-              userId={user.id.value}
-              toggleContactForm={toggleContactForm}
-            />
-            <CancelIcon toggleContactForm={toggleContactForm} />
+    <div data-testid="edit-contact">
+      {user && (
+        <SlideOut toggleContactForm={toggleContactForm}>
+          <div className={classes.editContact}>
+            <div className={classes.section}>
+              <h2 className={classes.title}>Edit Contact</h2>
+              <div className={classes.icons}>
+                <DeleteIcon
+                  userId={user.id.value}
+                  toggleContactForm={toggleContactForm}
+                />
+                <CancelIcon toggleContactForm={toggleContactForm} />
+              </div>
+            </div>
+            <ContactForm formik={formik} formType={FormType.Edit} />
           </div>
-        </div>
-        <ContactForm formik={formik} formType={FormType.Edit} />
-      </div>
-    </SlideOut>
+        </SlideOut>
+      )}
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import * as pageType from "./types";
 
 const initialState = {
-  pageTitle: "Address Book",
+  pageTitle: "Address book",
 };
 
 const pageReducer = (state = initialState, action) => {

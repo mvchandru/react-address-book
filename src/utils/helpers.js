@@ -37,3 +37,16 @@ export const getFormattedUserObject = (value, user = null) => {
   }
   return userObject;
 };
+
+export const getFilteredUsers = (value, users) => {
+  const searchTerm = value?.toLowerCase();
+  const filteredUsers = users.filter(
+    (user) =>
+      user.name.first.toLowerCase().includes(searchTerm) ||
+      user.name.last.toLowerCase().includes(searchTerm) ||
+      user.email.toLowerCase().includes(searchTerm) ||
+      user.phone.toString().includes(searchTerm) ||
+      user.type.toLowerCase().includes(searchTerm)
+  );
+  return filteredUsers;
+};

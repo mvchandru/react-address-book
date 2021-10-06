@@ -23,27 +23,27 @@ const ViewContact = ({ toggleContactForm }) => {
     },
   });
 
-  if (!user) {
-    return null;
-  }
-
   return (
-    <SlideOut toggleContactForm={toggleContactForm}>
-      <div className={classes.viewContact}>
-        <div className={classes.section}>
-          <h2 className={classes.title}>View Contact</h2>
-          <div className={classes.icons}>
-            <EditIcon toggleContactForm={toggleContactForm} />
-            <DeleteIcon
-              userId={user.id.value}
-              toggleContactForm={toggleContactForm}
-            />
-            <CancelIcon toggleContactForm={toggleContactForm} />
+    <div data-testid="view-contact">
+      {user && (
+        <SlideOut toggleContactForm={toggleContactForm}>
+          <div className={classes.viewContact}>
+            <div className={classes.section}>
+              <h2 className={classes.title}>View Contact</h2>
+              <div className={classes.icons}>
+                <EditIcon toggleContactForm={toggleContactForm} />
+                <DeleteIcon
+                  userId={user.id.value}
+                  toggleContactForm={toggleContactForm}
+                />
+                <CancelIcon toggleContactForm={toggleContactForm} />
+              </div>
+            </div>
+            <ContactForm formik={formik} formType={FormType.View} />
           </div>
-        </div>
-        <ContactForm formik={formik} formType={FormType.View} />
-      </div>
-    </SlideOut>
+        </SlideOut>
+      )}
+    </div>
   );
 };
 

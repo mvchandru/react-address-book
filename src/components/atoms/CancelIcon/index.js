@@ -4,7 +4,11 @@ import classes from "./styles.module.scss";
 const CancelIcon = ({ toggleContactForm }) => {
   return (
     <div className={classes.cancelIcon}>
-      <MaterialIcon name="clear" onClick={toggleContactForm} />
+      <MaterialIcon
+        data-testid="cancel-icon"
+        name="clear"
+        onClick={toggleContactForm}
+      />
     </div>
   );
 };

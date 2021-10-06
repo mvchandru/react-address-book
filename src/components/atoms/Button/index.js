@@ -5,8 +5,12 @@ export const ButtonStyle = {
   Secondary: "secondary",
 };
 
-const Button = ({ style = ButtonStyle.Primary, type, name }) => (
-  <button className={`${classes.button} ${classes[style]}`} type={type}>
+const Button = ({ style = ButtonStyle.Primary, type, name, onClick }) => (
+  <button
+    className={`${classes.button} ${classes[style]}`}
+    type={type}
+    onClick={onClick}
+  >
     {name}
   </button>
 );

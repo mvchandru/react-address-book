@@ -1,12 +1,10 @@
 import { useState } from "react";
 import MaterialIcon from "../MaterialIcon";
 import NewContact from "../../organisms/NewContact";
-import Toast from "../Toast";
 import classes from "./styles.module.scss";
 
 const AddIcon = () => {
   const [isContactShown, setIsContactShown] = useState(false);
-  const [isToastShown, setIsToastShown] = useState(false);
 
   const toggleContactNewForm = () => {
     setIsContactShown((prev) => !prev);
@@ -22,7 +20,6 @@ const AddIcon = () => {
       {isContactShown && (
         <NewContact toggleContactForm={toggleContactNewForm} />
       )}
-      {isToastShown && <Toast />}
     </div>
   );
 };

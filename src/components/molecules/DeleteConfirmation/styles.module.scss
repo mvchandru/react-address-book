@@ -1,0 +1,55 @@
+.deleteConfirmation {
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 7;
+    width: 100vw;
+    height: 100vh;
+  }
+  .content {
+    width: 25%;
+    position: fixed;
+    z-index: 8;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: rgba(255, 255, 255, 1);
+    border-radius: 3px;
+
+    .title {
+      padding: 10px 0;
+      text-align: center;
+    }
+    .buttonSection {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .deleteConfirmation {
+    .content {
+      width: 35%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .deleteConfirmation {
+    .content {
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .deleteConfirmation {
+    .content {
+      width: 90%;
+    }
+  }
+}
